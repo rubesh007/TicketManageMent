@@ -14,11 +14,13 @@ export const Trainer_Internship = () => {
 
     // Load data from localStorage on component mount
     useEffect( () => {
-        const savedData = localStorage.getItem( "studentInternshipDetail" );
+        const savedData = localStorage.getItem( "studentinternshipDetail" );
         if ( savedData ) {
             setDataStore( JSON.parse( savedData ) );
         }
     }, [] );
+
+    console.log("dataStore",dataStore)
 
     // pagination
     const usersPerPage = 5;
@@ -55,10 +57,10 @@ export const Trainer_Internship = () => {
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                             <div>
                                 <h1 className={ `text-2xl font-bold ${ darkMode ? 'text-white' : 'text-gray-900' }` }>
-                                    Mock Management
+                                    Internship Management
                                 </h1>
                                 <p className={ `mt-1 ${ darkMode ? 'text-gray-400' : 'text-gray-600' }` }>
-                                    Display of Student Mock Interview
+                                    Display of Student Internship
                                 </p>
                             </div>
 
@@ -99,7 +101,7 @@ export const Trainer_Internship = () => {
                                     />
                                 </div>
                                 <h3 className={ `text-lg font-medium ${ darkMode ? 'text-gray-300' : 'text-gray-700' }` }>
-                                    Nointernship Available
+                                    No Internship Available
                                 </h3>
                                 <p className={ `mt-2 ${ darkMode ? 'text-gray-500' : 'text-gray-600' }` }>
                                     No Students have added any Intership yet.

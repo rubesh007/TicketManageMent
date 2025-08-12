@@ -55,10 +55,10 @@ export const Trainer_Project = () => {
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                             <div>
                                 <h1 className={ `text-2xl font-bold ${ darkMode ? 'text-white' : 'text-gray-900' }` }>
-                                    Mock Management
+                                    Project Management
                                 </h1>
                                 <p className={ `mt-1 ${ darkMode ? 'text-gray-400' : 'text-gray-600' }` }>
-                                    Display of Student Mock Interview
+                                    Display of Student Projects
                                 </p>
                             </div>
 
@@ -99,10 +99,10 @@ export const Trainer_Project = () => {
                                     />
                                 </div>
                                 <h3 className={ `text-lg font-medium ${ darkMode ? 'text-gray-300' : 'text-gray-700' }` }>
-                                    Nointernship Available
+                                    No Project Available
                                 </h3>
                                 <p className={ `mt-2 ${ darkMode ? 'text-gray-500' : 'text-gray-600' }` }>
-                                    No Students have added any Intership yet.
+                                    No Students have added any Project yet.
                                 </p>
                             </div>
                         ) : (

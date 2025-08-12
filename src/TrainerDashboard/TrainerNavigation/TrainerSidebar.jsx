@@ -83,10 +83,11 @@ const TrainerSideBar = ( { darkMode, sidebarOpen, setSidebarOpen } ) => {
                 <div className={ `flex items-center justify-between p-4 border-b ${ darkMode ? 'border-gray-700' : 'border-gray-200' }` }>
                     { sidebarOpen && (
                         <div className="flex items-center space-x-2">
-                            <div className={ `p-2 rounded-lg ${ darkMode ? 'bg-white text-gray-900' : 'bg-gray-900 text-white' }` }>
-                                <FiCode className="w-6 h-6" />
+                            <div className={ `p-2 rounded-lg ${ darkMode ? 'bg-white text-gray-900' : 'bg-white text-white' }` }>
+                                {/* <FiCode className="w-6 h-6" /> */}
+                                <img src="../banner/logo.jpg" alt="Logo" className="w-10 h-10 rounded-3xl" />
                             </div>
-                            <h1 className={ `text-xl font-bold ${ darkMode ? 'text-white' : 'text-gray-900' }` }>CodeMaster</h1>
+                            <h1 className={ `text-xl font-bold ${ darkMode ? 'text-white' : 'text-gray-900' }` }>SLA</h1>
                         </div>
                     ) }
                     <button

@@ -126,7 +126,7 @@ export const Student_MockInterview = () => {
     };
 
     const handleEdit = ( id ) => {
-        const selectedIndex = dataStore.findIndex( item => item.id === id );
+        const selectedIndex = dataStore.findIndex( item => item.mockid === id );
         if ( selectedIndex !== -1 ) {
             setMockDetail( {
                 ...dataStore[ selectedIndex ]
@@ -137,7 +137,7 @@ export const Student_MockInterview = () => {
     };
 
     const handleDelete = ( id ) => {
-        const filtered = dataStore.filter( item => item.id !== id );
+        const filtered = dataStore.filter( item => item.mockid !== id );
         setDataStore( filtered );
         localStorage.setItem( "studentmockDetails", JSON.stringify( filtered ) );
     };
@@ -342,7 +342,7 @@ export const Student_MockInterview = () => {
                                                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                                         <div className="flex justify-end space-x-2">
                                                             <button
-                                                                onClick={ () => handleEdit( item.id ) }
+                                                                onClick={ () => handleEdit( item.mockid ) }
                                                                 className={ `p-2 rounded-lg ${ darkMode
                                                                     ? 'text-blue-400 hover:bg-gray-700'
                                                                     : 'text-blue-600 hover:bg-blue-50'
@@ -351,7 +351,7 @@ export const Student_MockInterview = () => {
                                                                 <FiEdit2 className="w-4 h-4" />
                                                             </button>
                                                             <button
-                                                                onClick={ () => handleDelete( item.id ) }
+                                                                onClick={ () => handleDelete( item.mockid ) }
                                                                 className={ `p-2 rounded-lg ${ darkMode
                                                                     ? 'text-red-400 hover:bg-gray-700'
                                                                     : 'text-red-600 hover:bg-red-50'
